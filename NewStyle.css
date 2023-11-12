@@ -1,0 +1,627 @@
+* {
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(portfolio-Images/background.jpg);
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+
+header {
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(90deg, #0074D9, #00bc8c);
+  color: #fff;
+  text-align: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.Brief-Description {
+  font-style: italic;
+}
+
+/* ----------- Negation Pseudo Class ------------*/
+header:not(h1) {
+  color: midnightblue
+}
+/* ---------------------------------------------*/
+
+/* ----------- Relational Selector ------------*/
+div>p {
+  background: linear-gradient(90deg, lightskyblue, magenta);
+  border-radius: 5px;
+}
+/* ---------------------------------------------*/
+
+header h1 {
+  padding: 20px;
+}
+
+.conatiner-nav {
+  padding: 10px 10%;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap
+}
+
+.logo {
+  width: 140px;
+  margin-bottom: 20px;
+  border: solid black;
+  border-radius: 10px;
+  margin-left: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, lightskyblue, magenta);
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;   /* -------------Transitions use for small bar under Nav when hovered------------*/
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+.header-text {
+  font-size: 30px;
+  text-decoration: underline, bold;
+  margin-left: 20px;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-text h1 {
+  font-size: 30px;
+  margin-top: 20px;
+  text-align: center;
+  flex: 1;
+}
+
+.header-text h1 span {
+  color: lightskyblue;
+}
+
+
+/* -----------------Full-Content-------------------*/
+.Full-Content {
+  display: grid;
+  grid-template-columns: minmax(200px, auto) 1fr;
+  /* sidebar min width 200px and main content takes up the rest */
+  grid-template-rows: auto;
+  /* Rows size to content */
+  height: 100vh;
+  /* Use full viewport height */
+  gap: 20px;
+  /* Adds gaps between rows and columns */
+  margin-right: 30px;
+}
+
+/* Content styles */
+.container-content {
+  grid-column: 2 / 3;
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
+  height: 100%;
+}
+
+/* -----------------Flip Animation-------------------*/
+.flip-card {
+  perspective: 2000px;
+  width: 300px;
+  /* Adjust the width as needed */
+  height: 400px;
+  /* Adjust the height as needed */
+  margin: auto;
+  /* Centers the card in the available space */
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+
+}
+
+.flip-card-front img,
+.flip-card-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 50%;
+  padding-bottom: 20px;
+}
+
+/* ---------------------------------------------*/
+
+footer {
+  background: linear-gradient(90deg, #0074D9, #00bc8c);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+
+/* -----------------Sidebar Styling-------------------*/
+.sidebar {
+  width: 140px;
+  background: linear-gradient(90deg, lightskyblue, magenta);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  height: 100vh;
+  border: solid black;
+  border-radius: 10px;
+  grid-column: 1 / 2;
+}
+
+/* Style the social icons */
+.social-icons a {
+  display: block;
+  margin-bottom: 15px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  opacity: 50%;
+}
+
+/* Added hover effect to the social icons */
+.social-icons img:hover {
+  /* LinkedIn */
+  transition: 1s;
+  opacity: 100%;
+}
+
+.social-icons span {
+  display: inline-block;
+  font-size: 12px;
+  color: blue;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* -----------------About-------------------*/
+#about {
+  padding: 80px 0;
+  color: white;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about-col-1 {
+  flex-basis: 35%;
+  /* sets the initial main size of a flex item */
+}
+
+.about-col-1 img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.about-col-2 {
+  flex-basis: 60%;
+}
+
+.sub-title {
+  font-size: 60px;
+  font-weight: 600;
+  color: white;
+}
+
+
+.progress-container {
+  width: 100%;
+  background-color: #f3f3f3;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  /* subtle shadow */
+  margin-bottom: 20px;
+  /* Space below the container */
+}
+
+/* Individual progress bar styling */
+
+.progress-container :nth-child(1) {
+  background-color: orange;
+  color: white;
+  text-align: right;
+  padding: 10px 20px;
+  /* Padding inside the bars */
+  width: 90%;
+  /* Initial width to match the percentage */
+  border-radius: 5px;
+  /* Rounded corners for bars */
+  transition: width 1s ease-in-out;
+  /* Animation for bar growth */
+  position: relative;
+  /* For positioning the percentage label */
+  margin-bottom: 10px;
+  /* Space between bars */
+}
+
+.progress-container :nth-child(2) {
+  background-color: purple;
+  text-align: right;
+  padding: 10px 20px;
+  /* Padding inside the bars */
+  width: 80%;
+  /* Initial width */
+  border-radius: 5px;
+  /* Rounded corners for bars */
+  transition: width 1s ease-in-out;
+  /* Animation for bar growth */
+  position: relative;
+  /* For positioning the percentage label */
+  margin-bottom: 10px;
+  /* Space between bars */
+}
+
+.progress-container :nth-child(3) {
+  background-color: rgba(255,0,0,0.9);
+  /* Green background */
+  color: white;
+  text-align: right;
+  padding: 10px 20px;
+  /* Padding inside the bars */
+  width: 95%;
+  /* Initial width */
+  border-radius: 5px;
+  /* Rounded corners for bars */
+  transition: width 1s ease-in-out;
+  /* Animation for bar growth */
+  position: relative;
+  /* For positioning the percentage label */
+  margin-bottom: 10px;
+  /* Space between bars */
+}
+
+/* Added a pseudo-element for the percentage label */
+.progress-bar::after {
+  content: attr(data-value);
+  /* Use a custom attribute for the label */
+  position: absolute;
+  right: 10px;
+  /* Positioning from the right */
+  top: 10px;
+  /* Positioning from the top */
+}
+
+/* Hover effect for bars */
+.progress-bar:hover {
+  box-shadow: 0 1px 5px rgba(25, 25, 112, 0.6);
+  /* More pronounced shadow on hover */
+}
+
+
+main {
+  background: rgb(25, 25, 112);
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.Container-Gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.Container-Gallery .image {
+  flex: 1;
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+.Container-Gallery img {
+  width: 100%;  /* This makes the image responsive and fit its container */
+  height: auto;  /* This keeps the image aspect ratio intact */
+  max-width: 100%; /* Ensures the image is not larger than the container */
+  max-height: 300px;
+  display: block;  /* Removes any extra space below the image that inline elements have */
+  border-radius: 5px;
+}
+
+/* -----------------Blog Page-------------------*/
+
+#blog {
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+}
+
+#blog h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+article {
+  background: (25, 25, 112);
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+article h3 {
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+article time {
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+/* Easiest Way to scale images */
+.ImageScaling {
+  object-fit: contain;
+  width: 100%;
+  border-radius: 5px;
+}
+
+/*----------------Contact Form Page------------------ */
+/* Center the contact form section */
+h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+}
+
+label {
+  margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  /* Space between the inputs */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  width: auto;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* ----------------- Validity styles for form elements --------------------*/
+input:valid,
+textarea:valid {
+  border: 2px solid green;
+}
+
+input:invalid,
+textarea:invalid {
+  border: 2px solid red;
+}
+
+input[type="email"]:valid {
+  background-color: #DFF0D8;
+}
+
+input[type="email"]:invalid {
+  background-color: rgb(253, 251, 251);
+}
+
+/*----------------Responsiveness------------------ */
+
+@media screen and (max-width: 768px) {
+  .Full-Content {
+    flex-direction: column;
+  }
+
+  .sidebar,
+  .container-content {
+    width: 100%;
+  }
+
+  .content-flex {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  /* Styles for small screens */
+  body {
+    font-size: 14px;
+  }
+
+  .container-nav nav ul {
+    flex-direction: column;
+  }
+
+  .header-text h1 {
+    font-size: 1.5rem;
+  }
+
+  article {
+    font-size: 14px;
+  }
+
+  header,
+  main,
+  footer {
+    padding: 10px;
+
+  }
+
+  .progress-container .progress-bar {
+    font-size: 14px;
+  }
+
+  .header-text h1 span {
+    color: red;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+
+  /* Styles for medium screens */
+  body {
+    font-size: 16px;
+  }
+
+  .container-nav nav ul {
+    flex-direction: row;
+  }
+
+  .header-text h1 {
+    font-size: 2rem;
+  }
+
+  article {
+    font-size: 16px;
+  }
+
+  header,
+  main,
+  footer {
+    padding: 20px;
+  }
+
+  .progress-container .progress-bar {
+    font-size: 16px;
+  }
+
+    .header-text h1 span {
+    color: green;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+
+  /* Styles for large screens */
+  body {
+    font-size: 18px;
+  }
+
+  .container-nav nav ul {
+    flex-direction: row;
+  }
+
+  .header-text h1 {
+    font-size: 2.5rem;
+  }
+
+  article {
+    font-size: 18px;
+  }
+
+  header,
+  main,
+  footer {
+    padding: 30px;
+  }
+
+  .progress-container .progress-bar {
+    font-size: 18px;
+  }
+
+    .header-text h1 span {
+    color: lightskyblue;
+  }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="NewStyle.css">
+</head>
+
+<body>
+
+    <!-- Nav Bar -->
+    <header>
+        <h1>Welcome to my Page</h1>
+        <div class="container-nav">
+            <nav>
+                <img src="portfolio-Images\default.png" class="logo">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="AboutMePage.html">About</a></li>
+                    <li><a href="blogpage.html">Blog</a></li>
+                    <li><a href="contactform.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Contact Page -->
+
+        <h2>Contact Me</h2>
+        <section id="contact-form">
+            <h3>If you wish to reach me, please send me a message!</h3>
+            <form action="submit_form.php" method="post">
+                <!-- HTML5 form elements for registration and messaging -->
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="example@example.com">
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+
+        <footer>
+            <p>&copy; Miguel Silva 2023 Portfolio Website</p>
+        </footer>
+
+
+</body>
+
+</html>

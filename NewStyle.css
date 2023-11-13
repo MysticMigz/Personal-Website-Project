@@ -1,10 +1,9 @@
 * {
-  font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
 }
 
 body {
-  background-image: url(portfolio-Images/background.jpg);
+  background-image: url(https://github.com/MysticMigz/Personal-Website-Project/blob/main/background.jpg?raw=true);
   background-size: cover;
   background-position: center;
   color: white;
@@ -50,6 +49,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap
+  
 }
 
 .logo {
@@ -69,8 +69,9 @@ nav ul li {
 nav ul li a {
   color: white;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 30px;
   position: relative;
+  font-family: 'BebasNeue-Regular', sans-serif;   /*Used the FontFace Here for Nav bar*/
 }
 
 nav ul li a::after {
@@ -81,7 +82,7 @@ nav ul li a::after {
   position: absolute;
   left: 0;
   bottom: -6px;
-  transition: 0.5s;   /* -------------Transitions use for small bar under Nav when hovered------------*/
+  transition: 0.5s;   /* -------------Transitions used for small bar under Nav when hovered------------*/
 }
 
 nav ul li a:hover::after {
@@ -109,6 +110,14 @@ nav ul li a:hover::after {
   color: lightskyblue;
 }
 
+h1{
+  font-family: 'BebasNeue-Regular', sans-serif; /*Used the FontFace Here for h1*/
+}
+
+p{
+  font-family: 'BebasNeue-Regular', sans-serif;
+  font-size: 30px;
+}
 
 /* -----------------Full-Content-------------------*/
 .Full-Content {
@@ -152,7 +161,6 @@ nav ul li a:hover::after {
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-
 }
 
 .flip-card:hover .flip-card-inner {
@@ -209,13 +217,13 @@ footer {
   padding: 20px;
   text-align: center;
   display: flex;
-  height: 100vh;
+  height: 100%;
   border: solid black;
   border-radius: 10px;
   grid-column: 1 / 2;
 }
 
-/* Style the social icons */
+
 .social-icons a {
   display: block;
   margin-bottom: 15px;
@@ -232,7 +240,6 @@ footer {
 
 /* Added hover effect to the social icons */
 .social-icons img:hover {
-  /* LinkedIn */
   transition: 1s;
   opacity: 100%;
 }
@@ -407,7 +414,7 @@ main {
 }
 
 article {
-  background: (25, 25, 112);
+  background: linear-gradient(90deg, #0074D9, #00bc8c);
   margin-bottom: 20px;
   padding: 20px;
   border-radius: 5px;
@@ -506,6 +513,61 @@ input[type="email"]:invalid {
   background-color: rgb(253, 251, 251);
 }
 
+/*--------------Bubbles Animation*------------*/
+.bubbles img{
+  width: 50px;
+  animation: bubble 7s linear infinite;
+}
+
+.bubbles{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  bottom: -300px; 
+}
+
+.bubbles img:nth-child(1){
+  animation-delay: 2s;
+}
+.bubbles img:nth-child(2){
+  animation-delay: 6s;
+}
+.bubbles img:nth-child(3){
+  animation-delay: 3s;
+}
+.bubbles img:nth-child(4){
+  animation-delay: 4.5s;
+}
+.bubbles img:nth-child(5){
+  animation-delay: 1s;
+}
+.bubbles img:nth-child(6){
+  animation-delay: 7s;
+}
+
+/*----------------Animation Keyframes------------------ */
+
+@keyframes bubble{
+   0%{
+    transform: translateY(0);
+    opacity: 0;
+  }
+    50%{
+    opacity: 1;
+  }
+    70%{
+    opacity: 1;
+  }
+    100%{
+    transform: translateY(-80vh);
+    opacity: 0;
+  }
+}
+
+/*-------------------------------------------------*/
+
 /*----------------Responsiveness------------------ */
 
 @media screen and (max-width: 768px) {
@@ -546,7 +608,6 @@ input[type="email"]:invalid {
   main,
   footer {
     padding: 10px;
-
   }
 
   .progress-container .progress-bar {
@@ -624,4 +685,17 @@ input[type="email"]:invalid {
     .header-text h1 span {
     color: lightskyblue;
   }
+}
+
+/*----------------Font Face------------------ */
+
+@font-face {
+  font-family: 'BebasNeue-Regular';
+  font-weight: 700;
+  src: url(assets/BebasNeue-Regular.otf);
+}
+@font-face {
+  font-family: 'Roboto-Regular';
+  font-weight: 700;
+  src: url(assets/Roboto-Regular.ttf);
 }

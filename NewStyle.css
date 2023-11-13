@@ -1,15 +1,15 @@
+/* Miguel Silva CSS - w1945895 - Tutorial Tuesday 11am - 1pm - Teacher: Ebad Majeed*/
+
 * {
   box-sizing: border-box;
 }
-
 body {
   background-image: url(https://github.com/MysticMigz/Personal-Website-Project/blob/main/background.jpg?raw=true);
   background-size: cover;
   background-position: center;
   color: white;
+  text-shadow: 2px 2px 3px black;
 }
-
-
 header {
   width: 100%;
   height: 50%;
@@ -18,32 +18,28 @@ header {
   text-align: center;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
 }
-
 .Brief-Description {
   font-style: italic;
 }
 
 /* ----------- Negation Pseudo Class ------------*/
 header:not(h1) {
-  color: midnightblue
+  color: midnightblue     /*Targets the h1*/
 }
 /* ---------------------------------------------*/
 
 /* ----------- Relational Selector ------------*/
-div>p {
+div>p {   /*Selects all direct children of div that are P elements. Any children with other elements (eg.section) inside div will not be selected*/
   background: linear-gradient(90deg, lightskyblue, magenta);
   border-radius: 5px;
 }
 /* ---------------------------------------------*/
-
 header h1 {
   padding: 20px;
 }
-
 .conatiner-nav {
   padding: 10px 10%;
 }
-
 nav {
   display: flex;
   align-items: center;
@@ -51,7 +47,6 @@ nav {
   flex-wrap: wrap
   
 }
-
 .logo {
   width: 140px;
   margin-bottom: 20px;
@@ -59,13 +54,11 @@ nav {
   border-radius: 10px;
   margin-left: 20px;
 }
-
 nav ul li {
   display: inline-block;
   list-style: none;
   margin: 10px 20px;
 }
-
 nav ul li a {
   color: white;
   text-decoration: none;
@@ -73,7 +66,6 @@ nav ul li a {
   position: relative;
   font-family: 'BebasNeue-Regular', sans-serif;   /*Used the FontFace Here for Nav bar*/
 }
-
 nav ul li a::after {
   content: '';
   width: 0;
@@ -84,11 +76,9 @@ nav ul li a::after {
   bottom: -6px;
   transition: 0.5s;   /* -------------Transitions used for small bar under Nav when hovered------------*/
 }
-
 nav ul li a:hover::after {
   width: 100%;
 }
-
 .header-text {
   font-size: 30px;
   text-decoration: underline, bold;
@@ -98,27 +88,22 @@ nav ul li a:hover::after {
   justify-content: center;
   align-items: center;
 }
-
 .header-text h1 {
   font-size: 30px;
   margin-top: 20px;
   text-align: center;
   flex: 1;
 }
-
 .header-text h1 span {
   color: lightskyblue;
 }
-
 h1{
   font-family: 'BebasNeue-Regular', sans-serif; /*Used the FontFace Here for h1*/
 }
-
 p{
   font-family: 'BebasNeue-Regular', sans-serif;
   font-size: 30px;
 }
-
 /* -----------------Full-Content-------------------*/
 .Full-Content {
   display: grid;
@@ -142,7 +127,6 @@ p{
   /* Center vertically */
   height: 100%;
 }
-
 /* -----------------Flip Animation-------------------*/
 .flip-card {
   perspective: 2000px;
@@ -195,9 +179,7 @@ p{
   border-radius: 50%;
   padding-bottom: 20px;
 }
-
-/* ---------------------------------------------*/
-
+/* ---------------Footer-----------------*/
 footer {
   background: linear-gradient(90deg, #0074D9, #00bc8c);
   color: white;
@@ -207,11 +189,9 @@ footer {
   width: 100%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
 }
-
-
 /* -----------------Sidebar Styling-------------------*/
 .sidebar {
-  width: 140px;
+  width: 200px;
   background: linear-gradient(90deg, lightskyblue, magenta);
   color: #fff;
   padding: 20px;
@@ -232,8 +212,8 @@ footer {
 }
 
 .social-icons img {
-  width: 30px;
-  height: 30px;
+  width: 60px;
+  height: 60px;
   margin-right: 10px;
   opacity: 50%;
 }
@@ -253,51 +233,26 @@ footer {
 }
 
 /* -----------------About-------------------*/
-#about {
-  padding: 80px 0;
-  color: white;
-}
-
-.row {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
 .about-col-1 {
-  flex-basis: 35%;
-  /* sets the initial main size of a flex item */
+  flex-basis: 35%;  /* Also adds responsiveness by setting initial size */
 }
-
 .about-col-1 img {
   width: 100%;
   border-radius: 15px;
 }
-
 .about-col-2 {
-  flex-basis: 60%;
+  flex-basis: 60%;  /* Also adds responsiveness by setting initial size */
 }
-
-.sub-title {
-  font-size: 60px;
-  font-weight: 600;
-  color: white;
-}
-
-
 .progress-container {
   width: 100%;
   background-color: #f3f3f3;
   padding: 10px;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  /* subtle shadow */
-  margin-bottom: 20px;
-  /* Space below the container */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);  /* subtle shadow */
+  margin-bottom: 20px;  /* Space below the container */
 }
 
-/* Individual progress bar styling */
-
+/* ----------Individual progress bar styling-------------- */
 .progress-container :nth-child(1) {
   background-color: orange;
   color: white;
@@ -352,24 +307,16 @@ footer {
   /* Space between bars */
 }
 
-/* Added a pseudo-element for the percentage label */
 .progress-bar::after {
-  content: attr(data-value);
-  /* Use a custom attribute for the label */
   position: absolute;
-  right: 10px;
-  /* Positioning from the right */
-  top: 10px;
-  /* Positioning from the top */
+  right: 10px;  /* Positioning from the right */
+  top: 10px;  /* Positioning from the top */
 }
-
 /* Hover effect for bars */
 .progress-bar:hover {
   box-shadow: 0 1px 5px rgba(25, 25, 112, 0.6);
   /* More pronounced shadow on hover */
 }
-
-
 main {
   background: rgb(25, 25, 112);
   margin-bottom: 20px;
@@ -377,20 +324,17 @@ main {
   border-radius: 5px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
-
 .Container-Gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 10px;
 }
-
 .Container-Gallery .image {
   flex: 1;
   max-width: 100%;
   margin-bottom: 10px;
 }
-
 .Container-Gallery img {
   width: 100%;  /* This makes the image responsive and fit its container */
   height: auto;  /* This keeps the image aspect ratio intact */
@@ -399,20 +343,16 @@ main {
   display: block;  /* Removes any extra space below the image that inline elements have */
   border-radius: 5px;
 }
-
 /* -----------------Blog Page-------------------*/
-
 #blog {
   max-width: 700px;
   margin: auto;
   padding: 20px;
 }
-
 #blog h2 {
   text-align: center;
   margin-bottom: 20px;
 }
-
 article {
   background: linear-gradient(90deg, #0074D9, #00bc8c);
   margin-bottom: 20px;
@@ -420,13 +360,11 @@ article {
   border-radius: 5px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
-
 article h3 {
   border-bottom: 1px dashed #ccc;
   padding-bottom: 10px;
   margin-bottom: 10px;
 }
-
 article time {
   font-style: italic;
   font-size: 0.9em;
@@ -440,14 +378,12 @@ article time {
 }
 
 /*----------------Contact Form Page------------------ */
-/* Center the contact form section */
 h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-
 #contact-form {
   display: flex;
   flex-direction: column;
@@ -455,14 +391,12 @@ h2 {
   justify-content: center;
   min-height: 100vh;
 }
-
 form {
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 500px;
 }
-
 label {
   margin-top: 10px;
 }
@@ -474,11 +408,9 @@ textarea {
   padding: 10px;
   margin-top: 5px;
   margin-bottom: 20px;
-  /* Space between the inputs */
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-
 input[type="submit"] {
   width: auto;
   padding: 10px 20px;
@@ -489,11 +421,9 @@ input[type="submit"] {
   color: white;
   cursor: pointer;
 }
-
 input[type="submit"]:hover {
   background-color: #0056b3;
 }
-
 /* ----------------- Validity styles for form elements --------------------*/
 input:valid,
 textarea:valid {
@@ -512,13 +442,11 @@ input[type="email"]:valid {
 input[type="email"]:invalid {
   background-color: rgb(253, 251, 251);
 }
-
 /*--------------Bubbles Animation*------------*/
 .bubbles img{
   width: 50px;
   animation: bubble 7s linear infinite;
 }
-
 .bubbles{
   width: 100%;
   display: flex;
@@ -527,7 +455,6 @@ input[type="email"]:invalid {
   position: absolute;
   bottom: -300px; 
 }
-
 .bubbles img:nth-child(1){
   animation-delay: 2s;
 }
@@ -546,9 +473,7 @@ input[type="email"]:invalid {
 .bubbles img:nth-child(6){
   animation-delay: 7s;
 }
-
 /*----------------Animation Keyframes------------------ */
-
 @keyframes bubble{
    0%{
     transform: translateY(0);
@@ -565,28 +490,21 @@ input[type="email"]:invalid {
     opacity: 0;
   }
 }
-
-/*-------------------------------------------------*/
-
 /*----------------Responsiveness------------------ */
 
 @media screen and (max-width: 768px) {
   .Full-Content {
     flex-direction: column;
   }
-
   .sidebar,
   .container-content {
     width: 100%;
   }
-
   .content-flex {
     flex-direction: column;
   }
 }
-
 @media only screen and (max-width: 600px) {
-
   /* Styles for small screens */
   body {
     font-size: 14px;
@@ -595,64 +513,51 @@ input[type="email"]:invalid {
   .container-nav nav ul {
     flex-direction: column;
   }
-
   .header-text h1 {
     font-size: 1.5rem;
   }
-
   article {
     font-size: 14px;
   }
-
   header,
   main,
   footer {
     padding: 10px;
   }
-
   .progress-container .progress-bar {
     font-size: 14px;
   }
-
   .header-text h1 span {
     color: red;
   }
 }
-
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
 
   /* Styles for medium screens */
   body {
     font-size: 16px;
   }
-
   .container-nav nav ul {
     flex-direction: row;
   }
-
   .header-text h1 {
     font-size: 2rem;
   }
-
   article {
     font-size: 16px;
   }
-
   header,
   main,
   footer {
     padding: 20px;
   }
-
   .progress-container .progress-bar {
     font-size: 16px;
   }
-
     .header-text h1 span {
     color: green;
   }
 }
-
 @media only screen and (min-width: 1025px) {
 
   /* Styles for large screens */
@@ -686,9 +591,7 @@ input[type="email"]:invalid {
     color: lightskyblue;
   }
 }
-
 /*----------------Font Face------------------ */
-
 @font-face {
   font-family: 'BebasNeue-Regular';
   font-weight: 700;
